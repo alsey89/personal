@@ -1,49 +1,44 @@
 ---
 import DefaultLayout from "@/layouts/DefaultLayout.astro";
-import { Card, CardContent, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardTitle,
+  CardHeader,
+  CardFooter,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 ---
 
 <DefaultLayout title="Home">
   <main>
-    <h1>Welcome to <span class="text-gradient">Astro</span></h1>
-    <p class="instructions">
-      To get started, open the directory <code>src/pages</code> in your project.<br
-      />
-      <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-    </p>
-    <ul role="list" class="link-card-grid">
-      <Card>
-        <CardTitle>Documentation</CardTitle>
-        <CardContent>
-          <a href="https://docs.astro.build/">
-            Learn how Astro works and explore the official API docs.
-          </a>
-        </CardContent>
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+      <Card class="col-span-3 p-4">
+        <img src="/profilepicture.jpg" alt="Michael Chen" class="" />
       </Card>
-      <Card class="p-2">
-        <CardTitle>Integrations</CardTitle>
+      <Card class="col-span-9 flex flex-col justify-between">
+        <CardTitle>
+          <div class="flex flex-col gap-2">
+            <div class="text-[56px] font-bold">Hello, my name is</div>
+            <div class="text-[64px] text-primary font-bold py-4">
+              Michael Chen
+            </div>
+          </div>
+        </CardTitle>
         <CardContent>
-          <a href="https://astro.build/integrations/">
-            Supercharge your project with new frameworks and libraries.
-          </a>
+          <div class="text-[32px] text-wrap text-gray-500">
+            Doctor turned Software Engineer, based in Taiwan. Passionate about
+            building.
+          </div>
         </CardContent>
+        <CardFooter>
+          <div class="flex gap-2 items-center">
+            <Button>Software Engineer</Button>
+            <Button>Medical Doctor</Button>
+            <Button>Entrepreneur</Button>
+          </div>
+        </CardFooter>
       </Card>
-      <Card class="p-2">
-        <CardTitle>Themes</CardTitle>
-        <CardContent>
-          <a href="https://astro.build/themes/">
-            Explore a galaxy of community-built starter themes.
-          </a>
-        </CardContent>
-      </Card>
-      <Card class="p-2">
-        <CardTitle>Community</CardTitle>
-        <CardContent>
-          <a href="https://astro.build/chat/">
-            Come say hi to our amazing Discord community. ❤️
-          </a>
-        </CardContent>
-      </Card>
-    </ul>
+    </div>
   </main>
 </DefaultLayout>
