@@ -3,42 +3,101 @@ import DefaultLayout from "@/layouts/DefaultLayout.astro";
 import {
   Card,
   CardContent,
+  CardDescription,
   CardTitle,
   CardHeader,
   CardFooter,
 } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import GoIcon from "@/components/ui/GoIcon.vue";
 ---
 
 <DefaultLayout title="Home">
   <main>
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
-      <Card class="col-span-3 p-4">
-        <img src="/profilepicture.jpg" alt="Michael Chen" class="" />
-      </Card>
-      <Card class="col-span-9 flex flex-col justify-between">
-        <CardTitle>
-          <div class="flex flex-col gap-2">
-            <div class="text-[56px] font-bold">Hello, my name is</div>
-            <div class="text-[64px] text-primary font-bold py-4">
-              Michael Chen
+    <div class="flex flex-col gap-2">
+      <!--! Hero -->
+      <div class="grid grid-cols-1 md:grid-cols-12 px-1 md:px-0 gap-4">
+        <Card class="col-span-1 md:col-span-3 p-4">
+          <img
+            src="/profilepicture.jpg"
+            alt="Michael Chen"
+            class="w-full h-full md:h-full object-cover"
+          />
+        </Card>
+        <Card class="col-span-1 md:col-span-9">
+          <CardTitle>
+            <div class="flex flex-col gap-2">
+              <div class="text-[32px] md:text-[64px] font-bold">
+                Hello World,
+              </div>
             </div>
-          </div>
-        </CardTitle>
-        <CardContent>
-          <div class="text-[32px] text-wrap text-gray-500">
-            Doctor turned Software Engineer, based in Taiwan. Passionate about
-            building.
-          </div>
-        </CardContent>
-        <CardFooter>
-          <div class="flex gap-2 items-center">
-            <Button>Software Engineer</Button>
-            <Button>Medical Doctor</Button>
-            <Button>Entrepreneur</Button>
-          </div>
-        </CardFooter>
-      </Card>
+          </CardTitle>
+          <CardHeader>
+            <div class="text-[32px] md:text-[64px] font-bold">
+              <span>IAM:</span>
+              <span class="text-grow text-primary py-4"> Michael Chen</span>
+            </div>
+          </CardHeader>
+          <CardContent>
+            <div class="text-[14px] md:text-[28px] text-wrap text-gray-500">
+              Doctor turned Software Engineer, based in Taiwan. Passionate about
+              building.
+            </div>
+          </CardContent>
+          <CardFooter>
+            <div class="flex flex-wrap gap-2 items-center">
+              <div
+                class="text-[12px] md:text-[24px] bg-primary text-primary-foreground hover:bg-primary-foreground hover:text-primary p-2 border-2 border-black rounded-none shadow-none"
+              >
+                Software Engineer
+              </div>
+              <div
+                class="text-[12px] md:text-[24px] bg-primary text-primary-foreground hover:bg-primary-foreground hover:text-primary p-2 border-2 border-black rounded-none shadow-none"
+              >
+                Medical Doctor
+              </div>
+              <div
+                class="text-[12px] md:text-[24px] bg-primary text-primary-foreground hover:bg-primary-foreground hover:text-primary px-4 py-2 border-2 border-black rounded-none shadow-none"
+              >
+                Entrepreneur
+              </div>
+            </div>
+          </CardFooter>
+        </Card>
+      </div>
+      <!--! Skill Tree -->
+      <div>Always learning. Current focus:</div>
+      <div class="flex gap-2">
+        <Card class="w-full">
+          <CardTitle>Frontend</CardTitle>
+          <CardContent>
+            <div class="flex flex-col gap-2">
+              <div>Vue</div>
+              <div>Nuxt</div>
+            </div>
+          </CardContent>
+        </Card>
+        <Card class="w-full">
+          <CardTitle>Backend</CardTitle>
+          <CardContent>
+            <div class="flex flex-col gap-2">
+              <div class="flex items-center gap-2">
+                <GoIcon class="h-12 w-12" />
+                <div>Go</div>
+              </div>
+              <div>Nodejs</div>
+            </div>
+          </CardContent>
+        </Card>
+        <Card class="w-full">
+          <CardTitle>DevOps</CardTitle>
+          <CardContent>
+            <div class="flex flex-col gap-2">
+              <div>Docker</div>
+              <div>Kubernetes</div>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
     </div>
   </main>
 </DefaultLayout>
