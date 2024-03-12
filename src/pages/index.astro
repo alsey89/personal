@@ -8,14 +8,20 @@ import {
   CardHeader,
   CardFooter,
 } from "@/components/ui/card";
-import GoIcon from "@/components/ui/GoIcon.vue";
+import {
+  GoIcon,
+  NodeIcon,
+  NuxtIcon,
+  VueIcon,
+  PostgresIcon,
+} from "@/components/icon";
 ---
 
 <DefaultLayout title="Home">
   <main>
-    <div class="flex flex-col gap-2">
+    <div class="flex flex-col gap-2 px-1">
       <!--! Hero -->
-      <div class="grid grid-cols-1 md:grid-cols-12 px-1 md:px-0 gap-4">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
         <Card class="col-span-1 md:col-span-3 p-4">
           <img
             src="/profilepicture.jpg"
@@ -65,39 +71,16 @@ import GoIcon from "@/components/ui/GoIcon.vue";
         </Card>
       </div>
       <!--! Skill Tree -->
-      <div>Always learning. Current focus:</div>
-      <div class="flex gap-2">
-        <Card class="w-full">
-          <CardTitle>Frontend</CardTitle>
-          <CardContent>
-            <div class="flex flex-col gap-2">
-              <div>Vue</div>
-              <div>Nuxt</div>
-            </div>
-          </CardContent>
-        </Card>
-        <Card class="w-full">
-          <CardTitle>Backend</CardTitle>
-          <CardContent>
-            <div class="flex flex-col gap-2">
-              <div class="flex items-center gap-2">
-                <GoIcon class="h-12 w-12" />
-                <div>Go</div>
-              </div>
-              <div>Nodejs</div>
-            </div>
-          </CardContent>
-        </Card>
-        <Card class="w-full">
-          <CardTitle>DevOps</CardTitle>
-          <CardContent>
-            <div class="flex flex-col gap-2">
-              <div>Docker</div>
-              <div>Kubernetes</div>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
+      <div>Always learning. Currenlty focusing on:</div>
+      <Card>
+        <CardContent class="flex w-full justify-around items-center px-4 py-2">
+          <GoIcon class="w-24 h-24" />
+          <NodeIcon class="w-24 h-24" />
+          <PostgresIcon class="w-24 h-24" />
+          <NuxtIcon class="w-24 h-24" />
+          <VueIcon class="w-24 h-24" />
+        </CardContent>
+      </Card>
     </div>
   </main>
 </DefaultLayout>
