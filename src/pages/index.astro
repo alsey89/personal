@@ -1,5 +1,5 @@
 ---
-import DefaultLayout from "@/layouts/DefaultLayout.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 import {
   Card,
   CardContent,
@@ -17,70 +17,14 @@ import {
 } from "@/components/icon";
 ---
 
-<DefaultLayout title="Home">
+<BaseLayout title="Home">
   <main>
-    <div class="flex flex-col gap-2 px-1">
-      <!--! Hero -->
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
-        <Card class="col-span-1 md:col-span-3 p-4">
-          <img
-            src="/profilepicture.jpg"
-            alt="Michael Chen"
-            class="w-full h-full md:h-full object-cover"
-          />
-        </Card>
-        <Card class="col-span-1 md:col-span-9">
-          <CardTitle>
-            <div class="flex flex-col gap-2">
-              <div class="text-[32px] md:text-[64px] font-bold">
-                Hello World,
-              </div>
-            </div>
-          </CardTitle>
-          <CardHeader>
-            <div class="text-[32px] md:text-[64px] font-bold">
-              <span>IAM:</span>
-              <span class="text-grow text-primary py-4"> Michael Chen</span>
-            </div>
-          </CardHeader>
-          <CardContent>
-            <div class="text-[14px] md:text-[28px] text-wrap text-gray-500">
-              Doctor turned Software Engineer, based in Taiwan. Passionate about
-              building.
-            </div>
-          </CardContent>
-          <CardFooter>
-            <div class="flex flex-wrap gap-2 items-center">
-              <div
-                class="text-[12px] md:text-[24px] bg-primary text-primary-foreground hover:bg-primary-foreground hover:text-primary p-2 border-2 border-black rounded-none shadow-none"
-              >
-                Software Engineer
-              </div>
-              <div
-                class="text-[12px] md:text-[24px] bg-primary text-primary-foreground hover:bg-primary-foreground hover:text-primary p-2 border-2 border-black rounded-none shadow-none"
-              >
-                Medical Doctor
-              </div>
-              <div
-                class="text-[12px] md:text-[24px] bg-primary text-primary-foreground hover:bg-primary-foreground hover:text-primary px-4 py-2 border-2 border-black rounded-none shadow-none"
-              >
-                Entrepreneur
-              </div>
-            </div>
-          </CardFooter>
+    <div class="w-full min-h-screen flex justify-center items-center">
+      <div class="w-full h-full flex flex-col justify-center items-center">
+        <Card class="w-1/4 h-1/4">
+          <CardTitle class="text-center">COMING SOON!</CardTitle>
         </Card>
       </div>
-      <!--! Skill Tree -->
-      <div>Always learning. Currenlty focusing on:</div>
-      <Card>
-        <CardContent class="flex w-full justify-around items-center px-4 py-2">
-          <GoIcon class="w-24 h-24" />
-          <NodeIcon class="w-24 h-24" />
-          <PostgresIcon class="w-24 h-24" />
-          <NuxtIcon class="w-24 h-24" />
-          <VueIcon class="w-24 h-24" />
-        </CardContent>
-      </Card>
     </div>
   </main>
-</DefaultLayout>
+</BaseLayout>
