@@ -19,68 +19,52 @@ import {
 
 <DefaultLayout title="Home">
   <main>
-    <div class="flex flex-col gap-2 px-1">
+    <div class="flex flex-col gap-2">
       <!--! Hero -->
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
-        <Card class="col-span-1 md:col-span-3 p-4">
-          <img
-            src="/profilepicture.jpg"
-            alt="Michael Chen"
-            class="w-full h-full md:h-full object-cover"
-          />
-        </Card>
-        <Card class="col-span-1 md:col-span-9">
-          <CardTitle>
-            <div class="flex flex-col gap-2">
-              <div class="text-[32px] md:text-[64px] font-bold">
-                Hello World,
-              </div>
+      <div class="grid grid-cols-1 md:grid-cols-12 border-black border-b-2">
+        <!-- Left side -->
+        <div class="h-80 col-span-1 md:col-span-6 bg-secondary">
+          <div class="flex flex-col gap-2 p-4">
+            <div class="text-[40px] font-bold">Hello World,</div>
+            <div class="flex items-center gap-2 text-[40px] font-bold">
+              <span class="flex items-center">
+                <div>I</div>
+                <div>AM</div>
+                <div>:</div>
+              </span>
+              <span class="text-primary py-4"> Michael Chen</span>
             </div>
-          </CardTitle>
-          <CardHeader>
-            <div class="text-[32px] md:text-[64px] font-bold">
-              <span>IAM:</span>
-              <span class="text-grow text-primary py-4"> Michael Chen</span>
-            </div>
-          </CardHeader>
-          <CardContent>
-            <div class="text-[14px] md:text-[28px] text-wrap text-gray-500">
+            <div class="text-[24px] text-wrap text-gray-500">
               Doctor turned Software Engineer, based in Taiwan. Passionate about
               building.
             </div>
-          </CardContent>
-          <CardFooter>
-            <div class="flex flex-wrap gap-2 items-center">
-              <div
-                class="text-[12px] md:text-[24px] bg-primary text-primary-foreground hover:bg-primary-foreground hover:text-primary p-2 border-2 border-black rounded-none shadow-none"
-              >
-                Software Engineer
-              </div>
-              <div
-                class="text-[12px] md:text-[24px] bg-primary text-primary-foreground hover:bg-primary-foreground hover:text-primary p-2 border-2 border-black rounded-none shadow-none"
-              >
-                Medical Doctor
-              </div>
-              <div
-                class="text-[12px] md:text-[24px] bg-primary text-primary-foreground hover:bg-primary-foreground hover:text-primary px-4 py-2 border-2 border-black rounded-none shadow-none"
-              >
-                Entrepreneur
-              </div>
-            </div>
-          </CardFooter>
-        </Card>
+          </div>
+        </div>
+        <!-- Right side -->
+        <div
+          class="hidden md:flex h-80 col-span-1 md:col-span-6 bg-primary justify-center"
+        >
+          <img
+            src="/profilepicture.jpg"
+            alt="Michael Chen"
+            class="h-[80%] my-auto object-cover rounded-full"
+          />
+        </div>
       </div>
-      <!--! Skill Tree -->
-      <div>Always learning. Currenlty focusing on:</div>
-      <Card>
-        <CardContent class="flex w-full justify-around items-center px-4 py-2">
-          <GoIcon class="w-24 h-24" />
-          <NodeIcon class="w-24 h-24" />
-          <PostgresIcon class="w-24 h-24" />
-          <NuxtIcon class="w-24 h-24" />
-          <VueIcon class="w-24 h-24" />
-        </CardContent>
-      </Card>
     </div>
+    <div class="h-16 border-b-2 border-black"></div>
+    <!--! Skill Tree -->
+    <div>Always learning. Currenlty focusing on:</div>
+    <Card>
+      <CardContent
+        class="flex w-full h-16 justify-around items-center px-4 py-2"
+      >
+        <GoIcon class="w-14 h-14" />
+        <NodeIcon class="w-14 h-14" />
+        <PostgresIcon class="w-14 h-14" />
+        <NuxtIcon class="w-14 h-14" />
+        <VueIcon class="w-14 h-14" />
+      </CardContent>
+    </Card>
   </main>
 </DefaultLayout>
