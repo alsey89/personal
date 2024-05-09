@@ -1,0 +1,38 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+import { SITE_TITLE } from "../consts";
+---
+
+s
+<header class="bg-white shadow">
+  <nav class="flex justify-between items-center p-4">
+    <h2 class="m-0 text-base">
+      <a href="/" class="text-primary">
+        {SITE_TITLE}
+      </a>
+    </h2>
+    <div class="internal-links hidden md:flex md:gap-4">
+      <HeaderLink href="/">Home</HeaderLink>
+      <HeaderLink href="/blog">Blog</HeaderLink>
+      <HeaderLink href="/about">About</HeaderLink>
+    </div>
+    <div class="flex gap-2">
+      <a
+        href="https://twitter.com/alsey89"
+        target="_blank"
+        class="border-2 rounded-full p-1"
+      >
+        T</a
+      >
+      <a
+        href="https://github.com/alsey89"
+        target="_blank"
+        class="border-2 rounded-full p-1"
+      >
+        G</a
+      >
+    </div>
+  </nav>
+</header>
+
+<style></style>
